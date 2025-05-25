@@ -1,0 +1,135 @@
+/* about me, how it started, and experiences section*/
+
+.section {
+  padding: 3rem 2rem;
+  background-color: rgba(245, 245, 245, 0.329);
+}
+
+.container {
+  max-width: 1400vm;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.section-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  border-radius: 1.25rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border-right: 6px solid #2e7d32;
+  padding: 3rem 6rem;
+  background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.about-img {
+  flex: 1 1 30%;
+  max-width: 30%;
+  min-width: 300px;
+  border-radius: 1rem;
+  object-fit: cover;
+  height: auto;
+}
+
+.section-text {
+  flex: 1 1 60%;
+}
+
+.section-text h3 {
+  margin-top: 4rem;
+  margin-left: 2rem;
+  font-size: 2.4rem;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.section-text p {
+  margin-top: 6rem;
+  margin-left: 2rem;
+  text-align: left;
+  font-size: 1.5rem;
+  color: #5a6b7d;
+  line-height: 2.8rem;
+}
+
+
+/* Green Hacks Section Styling */
+
+
+.greenhacks-section {
+  background: linear-gradient(135deg, #e6f9ec, #f6fff7);
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.greenhacks-section h2 {
+  padding-top: 20px;
+  padding-bottom: 100px;
+  text-align: center;
+  font-size: 2.75rem;
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.greenhacks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  padding: 0 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.greenhack {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 1.25rem;
+  border-right: 6px solid #2e7d32;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  padding: 3rem 3.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.greenhack:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.greenhack-img {
+  flex: 1 1 40%;
+  max-width: 20%;
+  min-width: 150px;
+  border-radius: 1rem;
+  object-fit: contain;
+  height: auto;
+}
+
+.greenhack-text {
+  flex: 1 1 55%;
+}
+
+.greenhack-text h3 {
+  margin-top: 1.5rem;
+  font-size: 2.3rem;
+  color: #2a3340;
+  font-weight: 600;
+}
+
+.greenhack-text p {
+  margin-top: 2rem;
+  font-size: 1.24rem;
+  color: #5a6b7d;
+  line-height: 1.9rem;
+}

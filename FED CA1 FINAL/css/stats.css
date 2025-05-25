@@ -1,0 +1,264 @@
+.stats-section {
+  padding: 100px 0;
+  margin-top: 20x;
+  overflow: hidden;
+} /* Adds vertical spacing and hides overflow for the stats section */
+
+.stats-container {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 30px;
+} /* Centers the stats content and adds horizontal padding within a max width */
+
+.stats-section h2 {
+  font-size: 3rem;
+  color: #2e7d32;
+  margin-bottom: 70px;
+  font-weight: 700;
+  position: relative;
+  left: 7.7%;
+} /* Styles the main heading of the stats section with large text and green color, also slightly shifted to the right */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  padding-top: 20px;
+} /* Creates a two-column grid layout with a larger left column and spacing between columns */
+
+.stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  margin-bottom: 35px;
+} /* Creates two equal columns for individual stat boxes and vertical spacing between rows */
+
+.stats-row:last-child {
+  margin-bottom: 0;
+} /* Removes extra margin from the last row */
+
+.stat-box {
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  border-top: 4px solid #2e7d32;
+  border-bottom: 4px solid transparent;
+} /* Styles each stat box with rounded edges, shadow, padding and a green top border */
+
+.stat-box:hover {
+  transform: scale(1.032);  
+  box-shadow: 0 15px 30px rgba(46, 125, 50, 0.15);
+  border-bottom-color: #2e7d32;
+} /* Adds hover effect to lift the box and reveal green bottom border */
+
+.stat-box h3 {
+  font-size: 2.5rem;
+  color: #2e7d32;
+  margin-bottom: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+} /* Styles the title inside each stat box with bold green text */
+
+.stat-progress {
+  height: 6px;
+  width: 100%;
+  background-color: #e8f5e9;
+  border-radius: 3px;
+  margin-top: 20px;
+  overflow: hidden;
+} /* Creates the background track for the progress bar */
+
+.stat-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #2e7d32, #81c784);
+} /* Fills the progress bar with a green gradient */
+
+.stat-box:nth-child(1) .stat-progress-bar { width: 9%; }
+/* Sets specific progress width for the first stat box */
+
+.stat-box p {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.5;
+} /* Styles the descriptive text inside stat boxes */
+
+.info-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 45px 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  border-left: 6px solid #2e7d32;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+} /* Creates a side information card with green border and white background */
+
+.info-card p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #444;
+  position: relative;
+} /* Styles paragraph text within the info card */
+
+.info-card strong {
+  color: #2e7d32;
+  font-weight: 700;
+} /* Highlights important text in green and bold */
+
+.highlight-text {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+} /* Positions highlight text relatively to allow pseudo-element styling */
+
+.highlight-text::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(46, 125, 50, 0.2);
+} /* Adds a green translucent underline effect for highlight text */
+
+.chart-section {
+  padding: 80px 0 120px;
+} /* Adds vertical spacing to the chart section */
+
+.chart-container {
+  max-width: 1400px;
+  margin: 0 auto;
+} /* Centers the chart content and limits its width */
+
+.chart-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding-left: 200px;
+} /* Arranges chart and legend in two columns with spacing and left padding */
+
+.donut-chart-container {
+  width: 400px;
+  height: 400px;
+} /* Sets fixed size for the donut chart */
+
+.donut-chart {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+} /* Styles the outer ring of the donut chart */
+
+.donut-chart::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+} /* Creates the hollow center of the donut chart */
+
+.donut-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+} /* Centers the text inside the donut chart */
+
+.donut-center-text h3 {
+  font-size: 1.5rem;
+  color: #2e7d32;
+  margin-bottom: 5px;
+  font-weight: 700;
+} /* Styles the main text in the donut center */
+
+.donut-center-text p {
+  font-size: 1rem;
+  color: #666;
+} /* Styles the subtitle in the donut center */
+
+/* Donut segments using conic-gradient */
+.donut-segments {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    #3c9941 0% 44%,     /* Organic waste - 44% */
+    #4caf50 44% 68%,    /* Paper & cardboard - 24% */
+    #81c784 68% 79%,    /* Plastic - 11% */
+    #a5d6a7 79% 89%,    /* Glass - 10% */
+    #c8e6c9 89% 94%,    /* Metal - 5% */
+    #e8f5e9 94% 100%    /* Other - 6% */
+  );
+  transform: rotate(-90deg);
+} /* Draws donut segments using conic-gradient and rotates them for correct start angle */
+
+/* Legend for the chart */
+.chart-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 270px;
+} /* Stacks legend items vertically with spacing */
+
+.legend-title {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #2e7d32;
+  margin-bottom: 25px;
+  font-weight: 600;
+} /* Styles the legend title */
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+} /* Aligns color block and text in each legend item */
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+} /* Color box for each waste type */
+
+.legend-text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.1rem;
+  color: #444;
+} /* Arranges legend label and percentage at opposite ends */
+
+.legend-percent {
+  font-weight: 600;
+  color: #2e7d32;
+} /* Emphasizes the percentage in the legend */
+
+/* Legend colors */
+.color-organic { background-color: #3c9941; } /* Color for organic waste */
+.color-paper { background-color: #4caf50; }   /* Color for paper */
+.color-plastic { background-color: #81c784; } /* Color for plastic */
+.color-glass { background-color: #a5d6a7; }   /* Color for glass */
+.color-metal { background-color: #c8e6c9; }   /* Color for metal */
+.color-other { background-color: #e8f5e9; }   /* Color for other types */
+
+.chart-card {
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+} /* Optional card container around chart or legend */
